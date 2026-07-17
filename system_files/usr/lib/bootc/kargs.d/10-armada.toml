@@ -1,0 +1,25 @@
+match-architectures = ["aarch64"]
+
+kargs = [
+    "rootwait",
+    "rootflags=noatime,compress=zstd:1",
+    "console=tty0",
+    "rhgb",
+    "quiet",
+    "plymouth.enable=1",
+    "loglevel=3",
+
+    "enforcing=0",
+
+    "allow_mismatched_32bit_el0",
+    "fw_devlink.strict=1",
+    "pcie_ports=compat",
+
+    "irqaffinity=0-1",
+
+    "cgroup.memory=nokmem,nosocket",
+
+    "cpufreq.default_governor=schedutil",
+
+    "swiotlb=8192",
+]
